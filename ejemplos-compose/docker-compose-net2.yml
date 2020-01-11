@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
    db:
@@ -11,6 +11,9 @@ services:
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: wordpress
+     networks:
+       testnet3:
+         ipv4_address: 33.12.1.100
 
    wordpress:
      depends_on:
@@ -27,7 +30,7 @@ services:
 volumes:
   db_data:
 networks:
-  default:
+  testnet3:
     driver: bridge
     ipam:
       config:

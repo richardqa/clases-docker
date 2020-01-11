@@ -1,4 +1,4 @@
-version: '3.3'
+version: '2.3'
 services:
    db:
      image: mysql:5.7
@@ -13,7 +13,6 @@ services:
        MYSQL_PASSWORD: wordpress
      networks:
        - testnet1
-
    wordpress:
      depends_on:
        - db
@@ -33,5 +32,12 @@ services:
 networks:
   testnet1:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 30.12.1.0/24
+
   testnet2:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 31.12.1.0/24
