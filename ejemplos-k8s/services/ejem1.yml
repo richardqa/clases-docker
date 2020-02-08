@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend-svc
+spec:
+  selector:
+    foo: bar
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8081
+    targetPort: 80
