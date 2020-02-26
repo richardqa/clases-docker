@@ -1,0 +1,6 @@
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+Si quieres cambiar el puerto 5000 por otro, usar:  $REGISTRY_HTTP_ADDR
+
+Almacenamiento personalizado:
+
+$ docker run -d -p 5000:5000 --restart=always --name registry -v /mnt/registry:/var/lib/registry registry:2
