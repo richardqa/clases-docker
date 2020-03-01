@@ -4,8 +4,7 @@ metadata:
   name: frontend-svc
 spec:
   selector:
-    foo: bar
-  type: NodePort
+    app: nextcloud
   ports:
   - protocol: TCP
     port: 8081
