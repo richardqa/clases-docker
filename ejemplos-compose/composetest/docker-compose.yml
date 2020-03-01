@@ -4,5 +4,11 @@ services:
     build: .
     ports:
       - "5010:5000"
+    healthcheck:
+      test: curl --fail -s http://localhost:5010/ || exit 1
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+
   redis:
     image: "redis:alpine"
