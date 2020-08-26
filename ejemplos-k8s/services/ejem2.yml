@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend-deploy
+spec:
+  selector:
+    role: web
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 15432
+    targetPort: 5432

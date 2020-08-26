@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: ./dir
+      dockerfile: Dockerfile-basic
+    ports:
+      - "5010:5000"
+  redis:
+    image: "redis:alpine"

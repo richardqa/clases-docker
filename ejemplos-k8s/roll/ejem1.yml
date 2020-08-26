@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myroll1
+spec:
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+  replicas: 4
+  selector:
+    matchLabels:
+      role: web2
+  template:
+    metadata:
+      name: roll1
+      labels:
+        role: web2
+    spec:    
+      containers:
+      - name: image-nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 80
