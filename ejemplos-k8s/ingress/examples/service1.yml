@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: webserver-blue-svc
+spec:
+  selector:
+    app: webserver
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 31611

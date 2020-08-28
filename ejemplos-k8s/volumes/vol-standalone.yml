@@ -8,7 +8,7 @@ spec:
   volumes:
   - name: host-volume
     hostPath:
-      path: /home/testuser/pod-volume
+      path: /home/richardqa/pod-volume
   containers:
   - image: nginx
     name: nginx
