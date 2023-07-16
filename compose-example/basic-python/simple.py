@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ## Import the necessary modules
-import time socket
+import time 
+import socket
 ## Use an ongoing while loop to generate output
 while True :
 ## Set the hostname and the current date
